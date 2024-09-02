@@ -14,6 +14,46 @@ Este é um projeto de exemplo de uma API RESTful para gerenciar produtos, desenv
 - **PostgreSQL Driver**: Driver JDBC necessário para a conexão com o banco de dados PostgreSQL.
 - **PostgreSQL**: Banco de dados relacional utilizado para armazenar os dados da aplicação.
 
+<h2>⚡️ Configuração do projeto</h2>
+
+**Pré-requisitos:**
+
+Certifique-se de ter as seguintes ferramentas instaladas em seu ambiente:
+
+- [JDK 22](https://www.oracle.com/br/java/technologies/downloads/)
+- [Maven](https://maven.apache.org/)
+- [PostgreSQL](https://www.postgresql.org/)
+
+**Instalação:**
+
+1. Clone o repositório:
+
+`https://github.com/jaquetrevizan/crud-springboot.git`  
+
+
+2. Navegue até o diretório do projeto:
+
+`cd crud-springboot`  
+
+3. Configure o banco de dados PostgreSQL:
+
+Crie um banco de dados chamado products-api e configure o username e password no arquivo `application.properties` localizado em src/main/resources:
+
+```java
+spring.datasource.url= jdbc:postgresql://localhost:5432/products-api
+spring.datasource.username= seu-usuario
+spring.datasource.password= sua-senha
+spring.jpa.hibernate.ddl-auto=update
+```
+
+4. Construa o projeto com Maven:
+
+`mvn clean install`
+
+4. Execute o projeto:
+
+`mvn spring-boot:run`
+
 <h2>⚡️ Endpoints da API</h2>
 
 A API fornece os seguintes endpoints para operações CRUD:
